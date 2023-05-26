@@ -1,5 +1,6 @@
 let cityinput = document.getElementById("cityinput");
 let inputbutton = document.getElementById("search");
+var cardholder = document.getElementById("daycontainer");
 let searchCity; //variable for parsed user input - in format for search in lowercase
 let historyCity; //variable for user input - in format for search history - in Titlecase
 
@@ -22,6 +23,27 @@ function mapWeatherData(obj) {
   return parsedWeather;
 }
 
+function writeCard(obj) {
+  var card = document.createElement("card");
+
+  var date = document.createElement("p");
+  date.textContent = obj.date;
+  var icon = document.createElement("img");
+  icon.src = obj.icon;
+  var temp = document.createElement("p");
+  temp.textContent = `Temp: ${obj.temp} C`;
+  var wind = document.createElement("p");
+  wind.textContent = `Wind: ${obj.wind} MPH`;
+  var humid = document.createElement("p");
+  humid.textContent = `Humidity ${obj.humid}%`;
+  card.appendChild(date);
+  card.appendChild(icon);
+  card.appendChild(temp);
+  card.appendChild(wind);
+  card.appendChild(humid);
+  cardholder.append(card);
+}
+
 function getWeather(city) {
   //search for data
   let request =
@@ -40,9 +62,10 @@ function getWeather(city) {
           //adds nicely formatted date key value pair
           return { ...object, date };
         });
+        cardholder.innerHTML = ""; //empties the container completely
         for (let index = 0; index < 5; index++) {
           const element = weather[index]; //gets just one of the objects (one days weather info)
-          console.log(mapWeatherData(element)); //makes a new object parsedWeather with easier paths to keys and only the keys we need
+          writeCard(mapWeatherData(element)); //makes a new object parsedWeather with easier paths to keys and only the keys we need
           //now have object with just the needed info
           //write code to create elements here
         }
