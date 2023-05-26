@@ -1,82 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <!-- <link rel="stylesheet" href= "put css here"/> -->
-        <title>WorldWide Weather</title>
-        <!-- Favicon-->
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="stylesheet" href= "put css here"/> -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>WorldWide Weather</title>
+    <!-- add Favicon-->
+  </head>
 
-    <body>
-        <header>
-            <h1> WorldWide Weather</h1>
-        </header>
+  <body>
+    <header>
+      <h1>WorldWide Weather</h1>
+    </header>
 
-        <aside> 
-            <!-- Search and cities -->
-            <input> 
-            <!-- search -->
-            <p> cities</p>
-        </aside>
+    <aside>
+      <h5>City Name</h5>
+      <!-- Search and cities -->
+      <form id="search">
+        <input id="cityinput" type="search" placeholder="search" />
+        <button type="submit">Search</button>
+      </form>
+      <!-- search -->
+      <p>cities</p>
+    </aside>
 
-        <section>
-            <!-- City forcast today -->
-            <h3> City & Date</h3>
-            <p> Temp</p>
-            <p> Wind</p>
-            <p> Rain</p>
-            <p> UV index</p>
-        </section>
+    <section>
+      <!-- City forcast today -->
+      <h3>City & Date</h3>
+      <p>Temp</p>
+      <p>Wind</p>
+      <p>Rain</p>
+      <p>UV index</p>
+    </section>
 
-        <section>
-            <!-- 5 day forcast -->
-            <card id="day1">
-                <p>Date</p>
-                <p> Temp</p>
-                <p> Wind</p>
-                <p> Rain</p>
-                <p> UV index</p>
-            </card>
+    <section>
+      <!-- 5 day forcast -->
+      <card id="day1">
+        <p>Date</p>
+        <p>Temp</p>
+        <p>Wind</p>
+        <p>Rain</p>
+        <p>UV index</p>
+      </card>
 
-            <card id="day2">
-                <p>Date</p>
-                <p> Temp</p>
-                <p> Wind</p>
-                <p> Rain</p>
-                <p> UV index</p>
-            </card>
+      <card id="day2">
+        <p>Date</p>
+        <p>Temp</p>
+        <p>Wind</p>
+        <p>Rain</p>
+        <p>UV index</p>
+      </card>
 
-            <card id="day3">
-                <p>Date</p>
-                <p> Temp</p>
-                <p> Wind</p>
-                <p> Rain</p>
-                <p> UV index</p>
-            </card>
+      <card id="day3">
+        <p>Date</p>
+        <p>Temp</p>
+        <p>Wind</p>
+        <p>Rain</p>
+        <p>UV index</p>
+      </card>
 
-            <card id="day4">
-                <p>Date</p>
-                <p> Temp</p>
-                <p> Wind</p>
-                <p> Rain</p>
-                <p> UV index</p>
-            </card>
+      <card id="day4">
+        <p>Date</p>
+        <p>Temp</p>
+        <p>Wind</p>
+        <p>Rain</p>
+        <p>UV index</p>
+      </card>
 
-            <card id="day5">
-                <p>Date</p>
-                <p> Temp</p>
-                <p> Wind</p>
-                <p> Rain</p>
-                <p> UV index</p>
-            </card>
+      <card id="day5">
+        <p>Date</p>
+        <p>Temp</p>
+        <p>Wind</p>
+        <p>Rain</p>
+        <p>UV index</p>
+      </card>
+    </section>
 
-        </section>
-
-        <footer>
-            <h4>Thanks for checking out my weather page</h4>
-            <p> Data from OpenWeather Api -- make a link</p>
-            <p> Report a problem with this page --make link</p>
-        </footer>
-
-    </body>
+    <footer>
+      <h4>Thanks for checking out my weather page</h4>
+      <p>Data from OpenWeather Api -- make a link</p>
+      <p>Report a problem with this page --make link</p>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="./assets/js/weatherAPI.js"></script>
+  <script src="./assets/js/test.js"></script>
 </html>
