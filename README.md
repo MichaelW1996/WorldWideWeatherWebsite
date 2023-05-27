@@ -6,7 +6,7 @@ A website using the OpenWeather API to supply weather information and forecast f
 
 _The requirements of the assigment asked for a conditional colour around the UV index, unfortunatly it seems the UV information is now only available for paid customers of the API, as such i have performed a similar function on the humidity_
 
-Live site found here:
+Live site found here: https://michaelw1996.github.io/WorldWideWeatherWebsite/
 
 ## Contents
 
