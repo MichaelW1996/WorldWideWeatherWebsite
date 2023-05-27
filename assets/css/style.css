@@ -1,0 +1,99 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+aside {
+  width: 19vw;
+  font-size: 125%;
+  text-align: center;
+  background-color: lightsteelblue;
+  border-radius: 10px;
+}
+aside h5 {
+  font-size: 150%;
+  margin: 10px;
+}
+
+container {
+  background-color: lightsteelblue;
+  border-radius: 10px;
+  width: 79vw;
+}
+aside ul {
+  margin: 0;
+  padding: 0;
+}
+aside li {
+  list-style: none;
+  padding: 5px;
+  margin: 5px;
+  background-color: darkcyan;
+  border-radius: 20px;
+}
+
+#daycontainer {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  text-align: center;
+  background-color: aquamarine;
+}
+header h1 {
+  padding: 2vh 0;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: aquamarine;
+}
+footer p,
+h4 {
+  margin: 0;
+}
+#today {
+  margin-left: 30px;
+  font-size: 175%;
+}
+#today img {
+  position: absolute;
+  right: 2vw;
+  top: 9vh;
+  height: 200px;
+  width: 200px;
+}
+#today :nth-child(5) {
+  width: fit-content;
+  padding: 5px;
+  border-radius: 7px;
+  color: azure;
+}
+
+.dry {
+  background-color: orange;
+}
+.moderate {
+  background-color: blue;
+}
+.humid {
+  background-color: red;
+}
+
+card {
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid black;
+  background-color: darkcyan;
+  border-radius: 5px;
+}
+card img {
+  left: 10%;
+  position: relative;
+}
