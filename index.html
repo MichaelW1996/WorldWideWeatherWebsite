@@ -12,65 +12,37 @@
     <header>
       <h1>WorldWide Weather</h1>
     </header>
+    <main>
+      <aside>
+        <h5>City Name</h5>
+        <!-- Search and cities -->
+        <form id="search">
+          <input id="cityinput" type="search" placeholder="search" />
+          <button type="submit">Search</button>
+        </form>
+        <!-- search -->
+        <p>Search History</p>
+        <ul id="history"></ul>
+      </aside>
+      <container>
+        <section id="today">
+          <!-- City forcast today -->
+          <h3>Search for a city!</h3>
+        </section>
 
-    <aside>
-      <h5>City Name</h5>
-      <!-- Search and cities -->
-      <form id="search">
-        <input id="cityinput" type="search" placeholder="search" />
-        <button type="submit">Search</button>
-      </form>
-      <!-- search -->
-      <p>cities</p>
-    </aside>
-
-    <section>
-      <!-- City forcast today -->
-      <h3>City & Date</h3>
-      <p>Temp</p>
-      <p>Wind</p>
-      <p>Rain</p>
-      <p>UV index</p>
-    </section>
-
-    <section id="daycontainer">
-      <card id="day2">
-        <p>Date</p>
-        <p>Temp</p>
-        <p>Wind</p>
-        <p>Rain</p>
-        <p>UV index</p>
-      </card>
-
-      <card id="day3">
-        <p>Date</p>
-        <p>Temp</p>
-        <p>Wind</p>
-        <p>Rain</p>
-        <p>UV index</p>
-      </card>
-
-      <card id="day4">
-        <p>Date</p>
-        <p>Temp</p>
-        <p>Wind</p>
-        <p>Rain</p>
-        <p>UV index</p>
-      </card>
-
-      <card id="day5">
-        <p>Date</p>
-        <p>Temp</p>
-        <p>Wind</p>
-        <p>Rain</p>
-        <p>UV index</p>
-      </card>
-    </section>
-
+        <section id="daycontainer"></section>
+      </container>
+    </main>
     <footer>
       <h4>Thanks for checking out my weather page</h4>
-      <p>Data from OpenWeather Api -- make a link</p>
-      <p>Report a problem with this page --make link</p>
+      <p>
+        Data from<a href="https://openweathermap.org/api"> OpenWeather Api</a>
+      </p>
+      <p>
+        <a href="https://github.com/MichaelW1996/WorldWideWeatherWebsite"
+          >Report a problem with this page</a
+        >
+      </p>
     </footer>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
