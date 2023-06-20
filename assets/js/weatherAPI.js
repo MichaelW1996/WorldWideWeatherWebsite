@@ -119,33 +119,29 @@ function getWeather(city) {
           writeCard(mapWeatherData(element)); //makes a new object parsedWeather with easier paths to keys and only the keys we need
         }
       });
-
       historyCity = searchCity.charAt(0).toUpperCase() + searchCity.substr(1); //puts input to Titlecase for search history (personal choice)
       searchHistory(historyCity); //calls the searchHistory function to put data into the search history
     } else {
       alert("City not found"); //tell the user if we didnt get a positive response
+      cityinput.value = ""; //reset the city input to avoid adding nonsense to the history?
     }
   });
-}
-
-function search() {
-  searchCity = cityinput.value.trim().toLowerCase(); //puts input to lowercase for fetch
-  getWeather(searchCity); //starts function to get data
 }
 
 inputbutton.addEventListener("submit", (event) => {
   //if the search button is clicked
   event.preventDefault(); //dont reset
-  search(); //start the search
+  searchCity = cityinput.value.trim().toLowerCase(); //puts input to lowercase for fetch
+  getWeather(searchCity); //starts function to get data
 });
 
 searchitems.addEventListener("click", (event) => {
   //if a search item is clicked
   if (event.target.tagName == "LI") {
     //check that it was a list item
-    var clickedsearch = event.target.innerHTML; //get the contents of the clicked list item
-    clickedsearch = clickedsearch.toLowerCase(); //put it to lowercase
-    getWeather(clickedsearch); //start a search for it
+    var cityinput = event.target.innerHTML; //get the contents of the clicked list item
+    searchCity = cityinput.value.trim().toLowerCase(); //puts input to lowercase for fetch
+    getWeather(searchCity); //starts function to get data
   }
 });
 
