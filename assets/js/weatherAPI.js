@@ -119,11 +119,11 @@ function getWeather(city) {
           writeCard(mapWeatherData(element)); //makes a new object parsedWeather with easier paths to keys and only the keys we need
         }
       });
+
       historyCity = searchCity.charAt(0).toUpperCase() + searchCity.substr(1); //puts input to Titlecase for search history (personal choice)
       searchHistory(historyCity); //calls the searchHistory function to put data into the search history
     } else {
       alert("City not found"); //tell the user if we didnt get a positive response
-      historyCity.value = ""; //reset the city input to avoid adding nonsense to the history?
     }
   });
 }
