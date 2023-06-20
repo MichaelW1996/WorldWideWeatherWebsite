@@ -123,7 +123,7 @@ function getWeather(city) {
       searchHistory(historyCity); //calls the searchHistory function to put data into the search history
     } else {
       alert("City not found"); //tell the user if we didnt get a positive response
-      searchCity.value = ""; //reset the city input to avoid adding nonsense to the history?
+      historyCity.value = ""; //reset the city input to avoid adding nonsense to the history?
     }
   });
 }
